@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #cae3f7;
+  color: #2b2b2b;
+  line-height: 1.7;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: right;
+}
+
+body.dark-mode {
+  background-color: #1e1e2f;
+  color: #d4d4d8;
+}
+
+/* Header Styles */
+header {
+  background-color: #446ccf;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode header {
+  background-color: #3b4a6b;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f2f9fd;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+#botton-next-prayer{
+  width: 300px;
+  height: 40px;
+}
+#fasl {
+  display: block;
+  margin: 20px auto; /* تضبط الصورة لتكون في المنتصف مع فراغ أعلى وأسفل */
+  width: 100%; /* اجعلها تمتد بعرض الصفحة */
+  max-width: 600px; /* تحديد أقصى عرض للصورة لتتناسب مع التصميم */
+  height: auto; /* يحافظ على نسبة العرض إلى الارتفاع */
+}
+
+#next-prayer {
+  text-align: center;
+}
+body.dark-mode main {
+  background: #202031;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode table {
+  background: #323242;
+}
+
+table th, table td {
+  padding: 15px;
+  text-align: center;
+  border: none;
+}
+
+table th {
+  background-color: #446ccf;
+  color: #ffffff;
+}
+
+body.dark-mode table th {
+  background-color: #3b4a6b;
+}
+
+table td {
+  background-color: #ffffff;
+  color: #2b2b2b;
+}
+
+body.dark-mode table td {
+  background-color: #2a2a40;
+  color: #d4d4d8;
+}
+
+table tr:hover {
+  background-color: #f1f6fc;
+}
+
+body.dark-mode table tr:hover {
+  background-color: #454565;
+}
+
+/* Button Styles */
+button {
+  background-color: #5a79e8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.30);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #4b69c6;
+}
+
+body.dark-mode button {
+  background-color: #4a5ca5;
+}
+
+body.dark-mode button:hover {
+  background-color: #3d4e85;
+}
+
+/* Toggle Buttons */
+#dark-mode-toggle,
+#menu-toggle {
+  position: fixed;
+  top: 20px;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  z-index: 10;
+  background-color: #eef2f5;
+}
+
+#dark-mode-toggle {
+  right: 20px;
+}
+
+#menu-toggle {
+  right: 80px;
+}
+
+body.dark-mode #dark-mode-toggle,
+body.dark-mode #menu-toggle {
+  background-color: #3e3e4b;
+  color: #a6a6e8;
+}
+
+/* Prayer Content Styles */
+#prayer-content {
+  background-color: #fcdede;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode #prayer-content {
+  background-color: #2a2a40;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+#prayer-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #446ccf;
+}
+
+body.dark-mode #prayer-content h2 {
+  color: #5a79e8;
+}
+
+#prayer-content img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #446ccf;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode footer {
+  background-color: #3b4a6b;
+}
+
+/* Floating Menu Styles */
+#floating-menu {
+  position: fixed;
+  top: 80px;
+  right: 85px;
+  background-color: #333;
+  color: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  width: 100%;
+  max-width: 220px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#floating-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#floating-menu ul li a {
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#floating-menu ul li a:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  table th, table td {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #dark-mode-toggle,
+  #menu-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  
+  #menu-toggle {
+    right: 70px;
+  }
+
+  #floating-menu {
+    width: 90%;
+    padding: 10px;
+  }
+
+  #floating-menu ul li a {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  #dark-mode-toggle,
+  #menu-toggle {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+  }
+  
+  #menu-toggle {
+    right: 65px;
+  }
+
+  #floating-menu {
+    width: 90%;
+    padding: 8px;
+  }
+
+  #floating-menu ul li a {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+}
